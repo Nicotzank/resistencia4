@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#colorTable {
+    margin: 20px;
+    border-collapse: collapse;
+    width: 80%;
+}
+
+th, td {
+    padding: 5px;
+    text-align: center;
+}
+
+.color-box {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #000;
+}
+
+.resistorImage {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.wire {
+    width: 50px;
+    height: 10px;
+    background-color: #555;
+}
+
+.resistor {
+    width: 200px;
+    height: 60px;
+    background-color: #b5b5b5;
+    border: 2px solid #000;
+    border-radius: 30px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.band {
+    width: 10%;
+    height: 80%;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.band1 { position: absolute; left: 20%; }
+.band2 { position: absolute; left: 40%; }
+.multiplier { position: absolute; left: 60%; }
+.tolerance { position: absolute; left: 80%; }
+
+.color-0 { background-color: black; }
+.color-1 { background-color: brown; }
+.color-2 { background-color: red; }
+.color-3 { background-color: orange; }
+.color-4 { background-color: yellow; }
+.color-5 { background-color: green; }
+.color-6 { background-color: blue; }
+.color-7 { background-color: violet; }
+.color-8 { background-color: gray; }
+.color-9 { background-color: white; }
+.color-10 { background-color: gold; }
+.color-11 { background-color: silver; }

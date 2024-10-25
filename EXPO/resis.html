@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Calculadora de Resistencias</title>
+</head>
+
+<body>
+    <h1>Calculadora de Resistencias</h1>
+    
+
+    <div class="container">
+        <table id="colorTable">
+            <thead>
+                <tr>
+                    <th>Color</th>
+                    <th>Valor</th>
+                    <th>Multiplicador</th>
+                    <th>Tolerancia</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr onclick="selectColor(0, false)">
+                    <td class="color-box color-0"></td>
+                    <td>Negro (0)</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr onclick="selectColor(1, false)">
+                    <td class="color-box color-1"></td>
+                    <td>Marrón (1)</td>
+                    <td>10<sup>1</sup></td>
+                    <td>±1%</td>
+                </tr>
+                <tr onclick="selectColor(2, false)">
+                    <td class="color-box color-2"></td>
+                    <td>Rojo (2)</td>
+                    <td>10<sup>2</sup></td>
+                    <td>±2%</td>
+                </tr>
+                <tr onclick="selectColor(3, false)">
+                    <td class="color-box color-3"></td>
+                    <td>Naranja (3)</td>
+                    <td>10<sup>3</sup></td>
+                    <td>—</td>
+                </tr>
+                <tr onclick="selectColor(4, false)">
+                    <td class="color-box color-4"></td>
+                    <td>Amarillo (4)</td>
+                    <td>10<sup>4</sup></td>
+                    <td>—</td>
+                </tr>
+                <tr onclick="selectColor(5, false)">
+                    <td class="color-box color-5"></td>
+                    <td>Verde (5)</td>
+                    <td>10<sup>5</sup></td>
+                    <td>±0.5%</td>
+                </tr>
+                <tr onclick="selectColor(6, false)">
+                    <td class="color-box color-6"></td>
+                    <td>Azul (6)</td>
+                    <td>10<sup>6</sup></td>
+                    <td>±0.25%</td>
+                </tr>
+                <tr onclick="selectColor(7, false)">
+                    <td class="color-box color-7"></td>
+                    <td>Violeta (7)</td>
+                    <td>10<sup>7</sup></td>
+                    <td>±0.1%</td>
+                </tr>
+                <tr onclick="selectColor(8, false)">
+                    <td class="color-box color-8"></td>
+                    <td>Gris (8)</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr onclick="selectColor(9, false)">
+                    <td class="color-box color-9"></td>
+                    <td>Blanco (9)</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr onclick="selectColor(10, true)">
+                    <td class="color-box color-10"></td>
+                    <td>Oro</td>
+                    <td>—</td>
+                    <td>±5%</td>
+                </tr>
+                <tr onclick="selectColor(11, true)">
+                    <td class="color-box color-11"></td>
+                    <td>Plata</td>
+                    <td>—</td>
+                    <td>±10%</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="band-selector">
+            <label for="band-selector">Seleccionar Banda:</label>
+            <select id="band-selector" onchange="updateSelectedBand()">
+                <option value="band1">Banda 1</option>
+                <option value="band2">Banda 2</option>
+                <option value="multiplier">Multiplicador</option>
+                <option value="tolerance">Tolerancia</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="resistor" id="resistorImage">
+        <div class="band band1" id="band1Resistor"></div>
+        <div class="band band2" id="band2Resistor"></div>
+        <div class="band multiplier" id="multiplierResistor"></div>
+        <div class="band tolerance" id="toleranceResistor"></div>
+    </div>
+
+    <div id="result"></div>
+
+    <button onclick="calculate()">Calcular</button>
+    
+    <script src="index.js"></script>
+</body>
+</html>
+
